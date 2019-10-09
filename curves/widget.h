@@ -3,6 +3,9 @@
 
 #include <QWidget>
 
+#include "curvescene.h"
+#include <QTimer>
+#include <QPainterPath>
 namespace Ui {
 class Widget;
 }
@@ -14,7 +17,15 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
+    curvescene* m_prealscene;
 
+    int height,width;
+    void initview();
+    void initAxis();
+
+    QTimer* testtimer;
+public slots:
+    void testtimeout();
 private:
     Ui::Widget *ui;
 };

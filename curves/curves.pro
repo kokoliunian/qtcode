@@ -13,8 +13,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        widget.cpp
+        widget.cpp \
+    curvedata.cpp \
+    curvescene.cpp
 
-HEADERS  += widget.h
+HEADERS  += widget.h \
+    curvedata.h \
+    curvescene.h
 
 FORMS    += widget.ui
